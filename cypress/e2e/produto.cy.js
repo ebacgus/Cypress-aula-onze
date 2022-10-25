@@ -5,7 +5,7 @@
 describe('Funcionalidade pagina de Produto', () => {
 
     beforeEach(() => {
-        cy.visit('http://lojaebac.ebaconline.art.br/produtos/page/2/')
+        cy.visit('produtos/page/2')
 
     });
 
@@ -37,7 +37,7 @@ describe('Funcionalidade pagina de Produto', () => {
     });
 
 
-    it.only('Deve adicionar o produto no carrinho', () => {
+    it('Deve adicionar o produto no carrinho', () => {
         var quantidade = 25
 
 
@@ -51,4 +51,5 @@ describe('Funcionalidade pagina de Produto', () => {
         cy.get('.woocommerce-message').should('contain', quantidade + ' × “Balboa Persistence Tee” foram adicionados no seu carrinho.')
     })
 
+    
     })
