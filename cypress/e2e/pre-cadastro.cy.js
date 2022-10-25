@@ -53,5 +53,10 @@ let emailFaker = faker.internet.email(nameFaker)
 
 });
 
+it.only('Deve completar o pre cadastro com suceso - Usando dados customizados', () => {
+    let emailFaker12 = faker.internet.email()
+    cy.Precadastro( emailFaker12, 'teste.teste@gus', 'guga', 'souza')
+    cy.get('.woocommerce-message').should('contain' , 'Detalhes da conta modificados com sucesso')
+});
 
 });
