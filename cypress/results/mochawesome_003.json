@@ -1,0 +1,167 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-10-28T19:58:39.884Z",
+    "end": "2022-10-28T19:59:08.258Z",
+    "duration": 28374,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 3,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "f7fc62ed-a918-425b-9de7-d13bdff82ee2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\pre-cadastro.cy.js",
+      "file": "cypress\\e2e\\pre-cadastro.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c00641f5-6a74-4864-a703-7969d7e6a1ed",
+          "title": "Funcionalidade pre cadastro",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve completar o pre cadastro com sucesso",
+              "fullTitle": "Funcionalidade pre cadastro Deve completar o pre cadastro com sucesso",
+              "timedOut": null,
+              "duration": 27406,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#reg_email').type(faker.internet.email());\ncy.get('#reg_password').type('teste.teste@gus');\ncy.get(':nth-child(4) > .button').click();\ncy.get('.woocommerce-MyAccount-navigation-link--edit-account > a').click();\ncy.get('#account_first_name').type('gustavo');\ncy.get('#account_last_name').type('pereira');\ncy.get('.woocommerce-Button').click();\ncy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso');",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > a.widget is not a function\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Funcionalidade pre cadastro`",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > a.widget is not a function\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Funcionalidade pre cadastro`\n    at <unknown> (http://lojaebac.ebaconline.art.br/wp-includes/js/jquery/ui/menu.min.js?ver=1.13.1:9:140)\n    at <unknown> (http://lojaebac.ebaconline.art.br/wp-includes/js/jquery/ui/menu.min.js?ver=1.13.1:9:95)\n    at <unknown> (http://lojaebac.ebaconline.art.br/wp-includes/js/jquery/ui/menu.min.js?ver=1.13.1:9:105)",
+                "diff": null
+              },
+              "uuid": "7ce6f82b-62f6-449c-b71f-092c78778fd9",
+              "parentUUID": "c00641f5-6a74-4864-a703-7969d7e6a1ed",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve completar o pre cadastro com sucesso",
+              "fullTitle": "Funcionalidade pre cadastro Deve completar o pre cadastro com sucesso",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#reg_email').type(faker.internet.email());\ncy.get('#reg_password').type('teste.teste@gus');\ncy.get(':nth-child(4) > .button').click();\ncy.get('.woocommerce-MyAccount-navigation-link--edit-account > a').click();\ncy.get('#account_first_name').type(faker.name.firstName());\ncy.get('#account_last_name').type(faker.name.lastName());\ncy.get('.woocommerce-Button').click();\ncy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso');",
+              "err": {},
+              "uuid": "1f71a4d6-b6ff-46f9-9f7b-175b31c4007d",
+              "parentUUID": "c00641f5-6a74-4864-a703-7969d7e6a1ed",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Deve completar o pre cadastro com sucesso",
+              "fullTitle": "Funcionalidade pre cadastro Deve completar o pre cadastro com sucesso",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let nameFaker = faker.name.firstName();\nlet sobrenomeFaker = faker.name.lastName();\nlet emailFaker = faker.internet.email(nameFaker);\ncy.get('#reg_email').type(emailFaker);\ncy.get('#reg_password').type('teste.teste@gus');\ncy.get(':nth-child(4) > .button').click();\ncy.get('.woocommerce-MyAccount-navigation-link--edit-account > a').click();\ncy.get('#account_first_name').type(nameFaker);\ncy.get('#account_last_name').type(sobrenomeFaker);\ncy.get('.woocommerce-Button').click();\ncy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso');",
+              "err": {},
+              "uuid": "7e3c8e94-77ec-4b85-a8ae-58e63c813b39",
+              "parentUUID": "c00641f5-6a74-4864-a703-7969d7e6a1ed",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Deve completar o pre cadastro com suceso - Usando dados customizados",
+              "fullTitle": "Funcionalidade pre cadastro Deve completar o pre cadastro com suceso - Usando dados customizados",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let emailFaker12 = faker.internet.email();\ncy.Precadastro(emailFaker12, 'teste.teste@gus', 'guga', 'souza');\ncy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso');",
+              "err": {},
+              "uuid": "058d0c6f-6b4a-44f5-a926-76e17a5bfcef",
+              "parentUUID": "c00641f5-6a74-4864-a703-7969d7e6a1ed",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "7ce6f82b-62f6-449c-b71f-092c78778fd9"
+          ],
+          "pending": [],
+          "skipped": [
+            "1f71a4d6-b6ff-46f9-9f7b-175b31c4007d",
+            "7e3c8e94-77ec-4b85-a8ae-58e63c813b39",
+            "058d0c6f-6b4a-44f5-a926-76e17a5bfcef"
+          ],
+          "duration": 27406,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

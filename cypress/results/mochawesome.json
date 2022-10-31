@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-10-27T21:17:01.965Z",
+    "end": "2022-10-27T21:27:19.721Z",
+    "duration": 617756,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9ebcd536-e336-4054-8068-eb0a27b89ab3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\endereco.cy.js",
+      "file": "cypress\\e2e\\endereco.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0da44dff-5fab-4da3-ae8e-03d3e1a4cdc6",
+          "title": "Funcionalidade Enderecos - Faturamento e Entrega",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve fazer o cadastro de faturamento com sucesso",
+              "fullTitle": "Funcionalidade Enderecos - Faturamento e Entrega Deve fazer o cadastro de faturamento com sucesso",
+              "timedOut": null,
+              "duration": 202040,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_endereco.default.editarEnderecoFaturamento('Gus', 'Souza', 'Shopee', 'Brasil', 'Antonio Rodrigues Fulcato 64', 'Casa', 'Guarulhos', 'São Paulo', '08400000', '11986200000', 'gustavo_tech@qualidade.com');\ncy.get('.woocommerce-message').should('contain', 'Endereço alterado com sucesso.');",
+              "err": {},
+              "uuid": "634b2041-763b-4f87-b08f-37e0f1bab9cd",
+              "parentUUID": "0da44dff-5fab-4da3-ae8e-03d3e1a4cdc6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve fazer o cadastro de faturamento - Usando arquivo de dados",
+              "fullTitle": "Funcionalidade Enderecos - Faturamento e Entrega Deve fazer o cadastro de faturamento - Usando arquivo de dados",
+              "timedOut": null,
+              "duration": 405898,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_endereco.default.editarEnderecoFaturamento(dadosEndereco[1].nome, dadosEndereco[1].sobrenome, dadosEndereco[1].empresa, dadosEndereco[1].pais, dadosEndereco[1].endereço, dadosEndereco[1].complemento, dadosEndereco[1].cidade, dadosEndereco[1].estado, dadosEndereco[1].cep, dadosEndereco[1].telefone, dadosEndereco[1].email);\ncy.get('.woocommerce-message').should('contain', 'Endereço alterado com sucesso.');",
+              "err": {},
+              "uuid": "62fbfb80-d854-40fd-9f5e-1533b9710c12",
+              "parentUUID": "0da44dff-5fab-4da3-ae8e-03d3e1a4cdc6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "634b2041-763b-4f87-b08f-37e0f1bab9cd",
+            "62fbfb80-d854-40fd-9f5e-1533b9710c12"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 607938,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

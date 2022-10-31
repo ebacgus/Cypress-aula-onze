@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-10-28T20:01:26.180Z",
+    "end": "2022-10-28T20:06:38.636Z",
+    "duration": 312456,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c6c01b61-8f36-4560-83ed-1e29412296cf",
+      "title": "",
+      "fullFile": "cypress\\e2e\\produto.cy.js",
+      "file": "cypress\\e2e\\produto.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "40d63f4b-99c5-4262-9afc-03ea385afc20",
+          "title": "Funcionalidade pagina de Produto",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve selecionar um produto da lista",
+              "fullTitle": "Funcionalidade pagina de Produto Deve selecionar um produto da lista",
+              "timedOut": null,
+              "duration": 51166,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[class=\"product-block grid\"]') // .eq(4)\n.contains('Beaumont Summit Kit').click();",
+              "err": {},
+              "uuid": "8bf9ecdf-1447-46f4-9e60-5b848974abfe",
+              "parentUUID": "40d63f4b-99c5-4262-9afc-03ea385afc20",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve adicionar o produto no carrinho",
+              "fullTitle": "Funcionalidade pagina de Produto Deve adicionar o produto no carrinho",
+              "timedOut": null,
+              "duration": 65175,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[class=\"product-block grid\"]').contains('Balboa Persistence Tee').click();\ncy.get('.button-variable-item-XS').click();\ncy.get('.button-variable-item-Green').click();\ncy.get('.input-text').clear().type(15);\ncy.get('.single_add_to_cart_button').click();\ncy.get('.dropdown-toggle > .mini-cart-items').should('contain', '15');\ncy.get('.woocommerce-message').should('contain', '15 × “Balboa Persistence Tee” foram adicionados no seu carrinho.');",
+              "err": {},
+              "uuid": "a540bccf-1d23-46ad-9173-e7b5c52d309e",
+              "parentUUID": "40d63f4b-99c5-4262-9afc-03ea385afc20",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve adicionar o produto no carrinho",
+              "fullTitle": "Funcionalidade pagina de Produto Deve adicionar o produto no carrinho",
+              "timedOut": null,
+              "duration": 108260,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var quantidade = 25;\ncy.get('[class=\"product-block grid\"]').contains('Balboa Persistence Tee').click();\ncy.get('.button-variable-item-XS').click();\ncy.get('.button-variable-item-Green').click();\ncy.get('.input-text').clear().type(quantidade);\ncy.get('.single_add_to_cart_button').click();\ncy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade);\ncy.get('.woocommerce-message').should('contain', quantidade + ' × “Balboa Persistence Tee” foram adicionados no seu carrinho.');",
+              "err": {},
+              "uuid": "1abb8d97-a494-4668-994a-e12d2bcac0d5",
+              "parentUUID": "40d63f4b-99c5-4262-9afc-03ea385afc20",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve adicionar o produto no carrinho  - Usando dados customizados",
+              "fullTitle": "Funcionalidade pagina de Produto Deve adicionar o produto no carrinho  - Usando dados customizados",
+              "timedOut": null,
+              "duration": 83169,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.addprodutos('Balboa Persistence Tee', 'L', 'Orange', 9);",
+              "err": {},
+              "uuid": "ffe6fb62-8429-4de5-8c7d-e2396281233d",
+              "parentUUID": "40d63f4b-99c5-4262-9afc-03ea385afc20",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8bf9ecdf-1447-46f4-9e60-5b848974abfe",
+            "a540bccf-1d23-46ad-9173-e7b5c52d309e",
+            "1abb8d97-a494-4668-994a-e12d2bcac0d5",
+            "ffe6fb62-8429-4de5-8c7d-e2396281233d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 307770,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

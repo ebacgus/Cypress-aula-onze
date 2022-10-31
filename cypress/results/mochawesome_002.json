@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-10-28T19:51:14.614Z",
+    "end": "2022-10-28T19:54:25.391Z",
+    "duration": 190777,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "467dc836-8879-408d-ab56-30d3251263d4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b9ee4325-cd7e-40de-bb65-a7fc2a545b14",
+          "title": "Funcionalidade do login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve fazer login com sucesso",
+              "fullTitle": "Funcionalidade do login Deve fazer login com sucesso",
+              "timedOut": null,
+              "duration": 57586,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#username').type('gustavo_cypress@teste.com');\ncy.get('#password').type('gustavo.gustavo**');\ncy.get('.woocommerce-form > .button').click();\ncy.get('a > .hidden-xs').should('contain', 'Welcome gustavo_cypress !');\ncy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, gustavo_cypress (não é gustavo_cypress? Sair');",
+              "err": {},
+              "uuid": "ac4c552b-a103-4e13-83e4-dbf89c37689e",
+              "parentUUID": "b9ee4325-cd7e-40de-bb65-a7fc2a545b14",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve fazer login com sucesso - Usando fixture",
+              "fullTitle": "Funcionalidade do login Deve fazer login com sucesso - Usando fixture",
+              "timedOut": null,
+              "duration": 22940,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('perfil').then(dados => {\n  cy.get('#username').type(dados.usuario);\n  cy.get('#password').type(dados.senha, {\n    log: false\n  });\n  cy.get('.woocommerce-form > .button').click();\n  cy.get('a > .hidden-xs').should('contain', 'Welcome gustavo_cypress !');\n});",
+              "err": {},
+              "uuid": "15c4ad6c-4fda-4250-a6b9-67b46a9c28a3",
+              "parentUUID": "b9ee4325-cd7e-40de-bb65-a7fc2a545b14",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve fazer login com sucesso - Usando arquivo de dados",
+              "fullTitle": "Funcionalidade do login Deve fazer login com sucesso - Usando arquivo de dados",
+              "timedOut": null,
+              "duration": 16267,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#username').type(perfil.usuario);\ncy.get('#password').type(perfil.senha);\ncy.get('.woocommerce-form > .button').click();\ncy.get('a > .hidden-xs').should('contain', 'Welcome gustavo_cypress !');",
+              "err": {},
+              "uuid": "a0574c34-f141-4350-be4e-b06d96743d49",
+              "parentUUID": "b9ee4325-cd7e-40de-bb65-a7fc2a545b14",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve exibir uma mensagem de erro ao inserir usuario inválido",
+              "fullTitle": "Funcionalidade do login Deve exibir uma mensagem de erro ao inserir usuario inválido",
+              "timedOut": null,
+              "duration": 28842,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#username').type('gustavo_cypress@teste.co');\ncy.get('#password').type('gustavo.gustavo**');\ncy.get('.woocommerce-form > .button').click();\ncy.get('.woocommerce-error').should('contain', 'Endereço de e-mail desconhecido');",
+              "err": {},
+              "uuid": "94804622-9199-42bf-9a4c-69f443b9fc53",
+              "parentUUID": "b9ee4325-cd7e-40de-bb65-a7fc2a545b14",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve exibir uma mensagem de erro ao enserir senha inválida ",
+              "fullTitle": "Funcionalidade do login Deve exibir uma mensagem de erro ao enserir senha inválida ",
+              "timedOut": null,
+              "duration": 36950,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#username').type('gustavo_cypress@teste.com');\ncy.get('#password').type('gustavo.gustavo*');\ncy.get('.woocommerce-form > .button').click();\ncy.get('.woocommerce-error > li').should('contain', 'Erro: A senha fornecida para o e-mail gustavo_cypress@teste.com está incorreta');",
+              "err": {},
+              "uuid": "a713eadd-3f2a-4cb3-9827-b154378bd64e",
+              "parentUUID": "b9ee4325-cd7e-40de-bb65-a7fc2a545b14",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ac4c552b-a103-4e13-83e4-dbf89c37689e",
+            "15c4ad6c-4fda-4250-a6b9-67b46a9c28a3",
+            "a0574c34-f141-4350-be4e-b06d96743d49",
+            "94804622-9199-42bf-9a4c-69f443b9fc53",
+            "a713eadd-3f2a-4cb3-9827-b154378bd64e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 162585,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
